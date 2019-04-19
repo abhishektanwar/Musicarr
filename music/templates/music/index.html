@@ -21,7 +21,7 @@
                     <h2>{{ album.album_title }}</h2>
                     <h4>{{ album.artist }}</h4>
                     <a href="{% url 'music:detail' album.id %}" class="btn btn-primary btn-sm" role="button">View Details</a>
-                    <form action="{% url 'music:delete' album.id%}" method="POST">
+                    <form action="#" method="POST">
                         {% csrf_token %}
                         <input type="hidden" name="album_id" id="" value="{{ album.id }}">
                         <button type="submit" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button>

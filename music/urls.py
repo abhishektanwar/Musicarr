@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from . import views
+
 app_name = 'music'
 urlpatterns = [
    
@@ -9,5 +10,6 @@ urlpatterns = [
 
     # /music/album_id/favourite
     url(r'^(?P<album_id>[0-9]+)/favourite/$',views.favourite,name='favourite'),
-    
+    url(r'album/add/$',views.AlbumCreate.as_view(),name='albumadd'),
+    url(r'^register/$',views.UserFormView.as_view(),name='register'),
 ]
